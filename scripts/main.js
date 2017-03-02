@@ -61,6 +61,7 @@ function showDetails() {
     }, 50);
 }
 
+//Assignment 4. Adding number keys.
 function addThumbKeyPressDetails(key) {
     'use strict';
     var thumbArray = getThumbnailsArray();
