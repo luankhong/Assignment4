@@ -53,7 +53,6 @@ a {
     max-width: 120px;
     border: 1px solid rgb(100%, 100%, 100%);
     border: 1px solid rgba(100%, 100%, 100%, 0.8);
-
     transition: transform 133ms ease-in-out;
 }
 
@@ -96,8 +95,7 @@ a {
 .detail-image-frame {
     position: relative;
     text-align: center;
-
-    transition: transform 333ms cubic-bezier(1,.06,.28,1);
+    transition: transform 333ms cubic-bezier(1, .06, .28, 1);
 }
 
 .is-tiny {
@@ -133,24 +131,20 @@ a {
 }
 
 @media all and (min-width: 768px) {
-  .main-content {
-    flex-direction: row;
-    overflow: hidden;
-  }
-
-  .thumbnail-list {
-    flex-direction: column;
-    order: 0;
-    margin-left: 20px;
-
-    padding: 0 35px;
-  }
-
-  .thumbnail-item {
-    max-width: 260px;
-  }
-
-  .thumbnail-item + .thumbnail-item {
-    margin-top: 20px;
-  }
+    .main-content {
+        flex-direction: row;
+        overflow: hidden;
+    }
+    .thumbnail-list {
+        flex-direction: column;
+        order: 0;
+        margin-left: 20px;
+        padding: 0 35px;
+    }
+    .thumbnail-item {
+        max-width: 260px;
+    }
+    .thumbnail-item+.thumbnail-item {
+        margin-top: 20px;
+    }
 }

@@ -32,10 +32,10 @@ function setDetailsFromThumb(thumbnail) {
 
 function addThumbClickHandler(thumb) {
     'use strict';
-    thumb.addEventListener('click', function (event) {
+    thumb.addEventListener('click', function(event) {
         event.preventDefault();
         setDetailsFromThumb(thumb);
-        showDetails() ;
+        showDetails();
     });
 }
 
@@ -61,25 +61,22 @@ function showDetails() {
     }, 50);
 }
 
-//*****************assignment 4 specific**********************************
 function addThumbKeyPressDetails(key) {
     'use strict';
-    var thumbArray= getThumbnailsArray();
+    var thumbArray = getThumbnailsArray();
     setDetailsFromThumb(thumbArray[key % 49]);
-    showDetails() ;
+    showDetails();
 }
-//*****************assignment 4 specific**********************************
 
 function addKeyPressHandler(thumbnailsLength) {
     'use strict';
-    document.body.addEventListener('keyup', function (event)
-    {
+    document.body.addEventListener('keyup', function(event) {
         event.preventDefault();
-        console.log(event.keyCode);
+        //console.log(event.keyCode);
         if (event.keyCode === ESC_KEY) {
             hideDetails();
         }
-        for (var  x = 49; x < 49 + thumbnailsLength && x <= 57; x++) { //Make sure x is within array range AND less than 57.
+        for (var x = 49; x < 49 + thumbnailsLength && x <= 57; x++) { //Make sure x is within array range AND less than 57.
             if (event.keyCode === x) {
                 addThumbKeyPressDetails(x);
             }
